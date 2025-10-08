@@ -34,7 +34,6 @@ export function takeoverField(
 
     field.owner = playerRole;
     field.ownerPoints = 1;
-    field.cost = field.baseCost * field.income + 1;
 
     if (shouldBlockField(field, currentRound)) {
         field.blockUntilRound = currentRound + BLOCK_TIME;
@@ -50,6 +49,8 @@ export function takeoverField(
     } else {
         session.action_points_b -= field.cost;
     }
+    
+    field.cost = field.baseCost * field.income + 1;
 }
 
 export function scaleOwnerPoints(field: InstanceType<typeof Field>) {

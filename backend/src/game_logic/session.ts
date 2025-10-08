@@ -19,7 +19,7 @@ export function nextTurn(
     session.points_a = getPoints(board, "player_a");
     session.points_b = getPoints(board, "player_b");
 
-    if (session.currentRound > ROUNDS) {
+    if (session.currentRound >= ROUNDS) {
         session.status = "completed";
         session.winner = session.points_a > session.points_b ? "player_a" : session.points_b > session.points_a ? "player_b" : "draw";
         return;
