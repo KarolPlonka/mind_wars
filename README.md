@@ -6,3 +6,8 @@ docker compose up --build
 ```
 Frontend will be available at http://localhost/
 
+## CLEAR DB
+```
+docker compose down -v
+```
+
