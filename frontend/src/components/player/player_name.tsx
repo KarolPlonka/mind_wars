@@ -13,6 +13,7 @@ const PlayerName = () => {
 
     const handleSave = async () => {
         if (tempName.trim()) {
+            console.log('API URL:', import.meta.env.VITE_API_URL);
             try {
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/players/`, {
                     method: 'POST',
